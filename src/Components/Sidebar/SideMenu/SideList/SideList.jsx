@@ -10,10 +10,10 @@ const SideList = () => {
                     <Link to="/Payments">Payments</Link>
                 </li>
                 <li>
-                    <p>Transfers</p>
+                    <Link to="/Payments">Transfers</Link>
                 </li>
                 <li>
-                    <p>Chargebacks</p>
+                    <Link to="/Payments">Chargebacks</Link>
                 </li>
             </ul>
         </div>

@@ -10,7 +10,8 @@ const styles = css({
             display: 'flex',
             alignItems: 'center',
             ' > h6': {
-                paddingLeft: '10px'
+                paddingLeft: '10px',
+                paddingTop: '10px'
             }
         },
     }

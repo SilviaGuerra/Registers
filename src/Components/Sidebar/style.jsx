@@ -1,7 +1,8 @@
 import { css } from 'glamor';
 
 const style = css({
-    width: '100%'
+    width: '70%',
+    height: '100vh'
 });
 
 export default style;

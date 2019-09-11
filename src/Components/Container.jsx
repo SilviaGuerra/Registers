@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import Main from './Main';
 
 const Container = () => {
     return (
         <div>
-            <Sidebar />
+            {/* <Sidebar /> */}
             <Main />
         </div>
     );

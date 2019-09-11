@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-//import moment from 'moment';
+import moment from 'moment';
 import { Paper, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
 
 const Payments = () => {
     const [data, setData] = useState({ results: [] });
+
     //eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async () => {
         const result = await axios(
@@ -17,7 +18,7 @@ const Payments = () => {
     return (
         <div>
             <h2>Payments</h2>
-            <Paper>
+            <Link to="/Details">
                 <Table size="small">
                     <TableHead>
                         <TableRow>
@@ -31,20 +32,18 @@ const Payments = () => {
                     </TableHead>
                     <TableBody>
                         {data.results.map((item, key) => (
-                            <Link to="/Details">
-                                <TableRow key={key}>
-                                    <TableCell></TableCell>
-                                    <TableCell>{item.created}</TableCell>
-                                    <TableCell>{item.status}</TableCell>
-                                    <TableCell>{item.type}</TableCell>
-                                    <TableCell>{item.customer.name}</TableCell>
-                                    <TableCell>{item.amount}</TableCell>
-                                </TableRow>
-                            </Link>
-                            ))}
+                            <TableRow key={key}>
+                                <TableCell></TableCell>
+                                <TableCell>{moment.unix(item.created).utc().format('DD MMMM YY HH:mm A')}</TableCell>
+                                <TableCell>{item.status}</TableCell>
+                                <TableCell>{item.type}</TableCell>
+                                <TableCell>{item.customer.name}</TableCell>
+                                <TableCell>{item.amount}</TableCell>
+                            </TableRow>
+                        ))}
                     </TableBody>
                 </Table>
-            </Paper>
+            </Link>
         </div>
     );
 }

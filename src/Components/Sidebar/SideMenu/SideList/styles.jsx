@@ -4,14 +4,15 @@ const styles = css({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '10px',
+    padding: '0px 10px',
     ' .sideItem': {
         '&__list': {
             paddingLeft: '10px',
             transform: 'translate(27%, 0%)',
             listStyleType: 'none',
             ' > li': {
-                padding: '10px 0px',
+                padding: '5px 0px',
+                fontSize: '14px',
                 ' > a': {
                     color: '#828181',
                     textDecoration: 'none',
