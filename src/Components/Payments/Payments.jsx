@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import icons from '../../helpers/icons';
 import axios from 'axios';
 import moment from 'moment';
-import { Paper, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
+import { Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
+
+import { style, stylesMaterial } from './style';
 
 const Payments = () => {
     const [data, setData] = useState({ results: [] });
@@ -16,11 +19,11 @@ const Payments = () => {
     }, []);
 
     return (
-        <div>
+        <div {...style}>
             <h2>Payments</h2>
             <Link to="/Details">
-                <Table size="small">
-                    <TableHead>
+                <Table size="small" padding="none">
+                    <TableHead classes={stylesMaterial.tableBody}>
                         <TableRow>
                             <TableCell></TableCell>
                             <TableCell>Date</TableCell>
@@ -33,8 +36,8 @@ const Payments = () => {
                     <TableBody>
                         {data.results.map((item, key) => (
                             <TableRow key={key}>
-                                <TableCell></TableCell>
-                                <TableCell>{moment.unix(item.created).utc().format('DD MMMM YY HH:mm A')}</TableCell>
+                                <TableCell><img src={icons.view()} alt="icon"/></TableCell>
+                                <TableCell>{moment.unix(item.created).utc().format('DD MMM YY HH:mm A')}</TableCell>
                                 <TableCell>{item.status}</TableCell>
                                 <TableCell>{item.type}</TableCell>
                                 <TableCell>{item.customer.name}</TableCell>

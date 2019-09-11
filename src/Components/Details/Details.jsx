@@ -41,12 +41,11 @@ const Details = () => {
 
     return (
         <div>
-            <AppBar>
-                <Tabs value={value} onChange={handleChange}>
-                    <Tab label="Data" {...a11yProps(0)} />
-                    <Tab label="Breakdown" {...a11yProps(1)} />
-                </Tabs>
-            </AppBar>
+            <h2>Detalles</h2>
+            <Tabs value={value} onChange={handleChange}>
+                <Tab label="Data" {...a11yProps(0)} />
+                <Tab label="Breakdown" {...a11yProps(1)} />
+            </Tabs>
             <TabPanel value={value} index={0}>
                 <Data />
             </TabPanel>
