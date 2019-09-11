@@ -9,6 +9,7 @@ const styles = css({
         '&__list': {
             paddingLeft: '10px',
             transform: 'translate(27%, 0%)',
+            listStyleType: 'none',
             ' > li': {
                 padding: '10px 0px',
                 ' > a': {

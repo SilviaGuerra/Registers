@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from './styles';
-import Payments from '../../../Payments/Payments';
 
 const SideList = () => {
     return (

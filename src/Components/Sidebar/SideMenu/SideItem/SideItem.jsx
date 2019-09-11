@@ -7,16 +7,16 @@ import ArrowUp from '../../../../helpers/icons/ArrowUp';
 import styles from './styles';
 
 const SideItem = (props) => {
-    const [arrow, toggleArrow] = useState(false);
-    const setOpen = () => { toggleArrow(!arrow) };
+    // const [arrow, toggleArrow] = useState(false);
+    // const setOpen = () => { toggleArrow(!arrow) };
     
     return (
-        <div {...styles} onClick={setOpen}>
+        <div {...styles}>
             <div className="sideItem__title">
                 <GeneralIcon />
                 <h6>{props.title}</h6>
             </div>
-            {arrow ? <ArrowDown /> : <ArrowUp />}
+            {/* {arrow ? <ArrowDown /> : <ArrowUp />} */}
         </div>
     );
 }

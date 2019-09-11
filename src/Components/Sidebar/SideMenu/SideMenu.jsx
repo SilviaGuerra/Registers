@@ -12,8 +12,9 @@ const SideMenu = (props) => {
                 open={props.openMenu}
                 onClick={() => props.onCustomClick()}
             />
+            <SideList /> 
             {/* {console.log(props.open, props.onCustomClick)} */}
-            {props.openMenu ? <SideList /> : null}
+            {/* {props.openMenu ? <SideList /> : null} */}
         </div>
     );
 }

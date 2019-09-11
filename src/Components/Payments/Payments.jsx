@@ -30,8 +30,8 @@ const Payments = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <Link to="/Details">
-                            {data.results.map((item, key) => (
+                        {data.results.map((item, key) => (
+                            <Link to="/Details">
                                 <TableRow key={key}>
                                     <TableCell></TableCell>
                                     <TableCell>{item.created}</TableCell>
@@ -40,8 +40,8 @@ const Payments = () => {
                                     <TableCell>{item.customer.name}</TableCell>
                                     <TableCell>{item.amount}</TableCell>
                                 </TableRow>
+                            </Link>
                             ))}
-                        </Link>
                     </TableBody>
                 </Table>
             </Paper>
