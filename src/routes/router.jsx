@@ -1,14 +1,16 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const browserRouter = () => (
-    <Switch>
-        <Route exact path="/" component={Container} />
-        <Route path="/" component={Payments} />
-        <Route path="/payments" component={Details} />
-        <Route path="/details" component={Data} />
-        <Route path="/details" component={Breakdown} />
-    </Switch>
+    <BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={Container} />
+            <Route path="/payments" component={Payments} />
+            <Route path="/details" component={Details} />
+            <Route path="/data" component={Data} />
+            <Route path="/breakdown" component={Breakdown} />
+        </Switch>
+    </BrowserRouter>
 );
 
 export default browserRouter;
