@@ -1,12 +1,12 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import Payments from './Payments';
+import Main from './Main';
 
 const Container = () => {
     return (
         <div>
             <Sidebar />
-            <Payments />
+            <Main />
         </div>
     );
 }

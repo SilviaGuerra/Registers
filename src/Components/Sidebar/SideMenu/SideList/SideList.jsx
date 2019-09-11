@@ -1,19 +1,20 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import styles from './styles';
+import Payments from '../../../Payments/Payments';
 
 const SideList = () => {
     return (
         <div {...styles}>
             <ul className="sideItem__list">
                 <li>
-                    <a href="#">Payments</a>
+                    <Link to="/Payments">Payments</Link>
                 </li>
                 <li>
-                    <a href="#">Transfers</a>
+                    <p>Transfers</p>
                 </li>
                 <li>
-                    <a href="#">Chargebacks</a>
+                    <p>Chargebacks</p>
                 </li>
             </ul>
         </div>
