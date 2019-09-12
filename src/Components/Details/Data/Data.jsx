@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Tab, Tabs } from 'react-bootstrap/';
 import { Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
+import CardStatus from './CardStatus';
+import CardClient from './CardClient';
 
 import styles from './styles';
 
@@ -29,65 +31,21 @@ const Data = () => {
 
     return (
         <section {...styles}>
-            {/* El siguiente div es un componente */}
-            <div className="data__card">
-                <h3>Payment status</h3>
-                <div className="data__card__amount">
-                    <div>
-                        <h6>Amount</h6>
-                        <span>$ {data.amount}</span>
-                    </div>
-                    <div>
-                        <p>
-                            Created at:
-                            <span>{data.created}</span>
-                        </p>
-                        <p>
-                            Paid at: <span>{data.paid_at}</span>
-                        </p>
-                    </div>
-                </div>
-                <div className="data__card__status">
-                    <span> {data.status} </span>
-                    {data.nested_charges.map(item => (
-                        <span>{item.failure_message}</span>
-                    ))}
-                </div>
-                <di className="data__card__order">
-                    <div>
-                        <h6>Order ID</h6>
-                        <p>{data.id}</p>
-                    </div>
-                    <div>
-                        <a>View transfer</a>
-                        <a>View chargeback</a>
-                    </div>
-                </di>
-            </div>
-            <div className="data__card">
-                <h3>Client</h3>
-                <div className="data__card__amount">
-                    <img alt="icono"/>
-                    <div>
-                        <p>Name:</p>
-                        <p>{data.customer.name}</p>
-                    </div>
-                </div>
-                <div className="data__card__amount">
-                    <img alt="icono" />
-                    <div>
-                        <p>Email:</p>
-                        <p>{data.customer.email}</p>
-                    </div>
-                </div>
-                <div className="data__card__amount">
-                    <img alt="icono" />
-                    <div>
-                        <p>Phone number:</p>
-                        <p>{data.customer.phone}</p>
-                    </div>
-                </div>   
-            </div>
+            <CardStatus 
+                title="Payment status"
+                amount={data.amount}
+                created={data.created}
+                paidAt={data.paid_at}
+                status={data.status}
+                nestedCharges={data.nested_charges}
+                id={data.id}
+            />
+            <CardClient 
+                title="Client"
+                customerName={data.customer.name}
+                customerEmail={data.customer.email}
+                customerPhone={data.customer.phone}
+            />
             <div className="data__card">
                 <h3>Payment method</h3>
                 <div className="data__card__amount">

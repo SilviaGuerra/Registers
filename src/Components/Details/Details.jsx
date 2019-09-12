@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Tabs, Tab, Typography, Box }from '@material-ui/core';
+import { Tabs, Tab } from 'react-bootstrap'
 import Data from './Data';
 import Breakdown from './Breakdown';
 
@@ -10,51 +10,22 @@ const propTypes = {
     value: PropTypes.any.isRequired,
 };
 
-const TabPanel = (props) => {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <Typography
-            component="div"
-            role="details"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            {...other}
-        >
-            <Box p={4}>{children}</Box>
-        </Typography>
-    );
-}
-
-const a11yProps = (index) => {
-    return {
-        id: `simple-tab-${index}`,
-    };
-}
-
 const Details = () => {
-    const [value, setValue] = useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    }
-
+    const [key, setKey] = useState('data');
     return (
         <div>
             <h2>Detalles</h2>
-            <Tabs value={value} onChange={handleChange}>
-                <Tab label="Data" {...a11yProps(0)} />
-                <Tab label="Breakdown" {...a11yProps(1)} />
+            <Tabs id="controlled-tab-example" activeKey={key} onSelect={k => setKey(k)}>
+                <Tab eventKey="data" title="Data">
+                    <Data />
+                </Tab>
+                <Tab eventKey="breakdown" title="Breakdown">
+                    <Breakdown />
+                </Tab>
             </Tabs>
-            <TabPanel value={value} index={0}>
-                <Data />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <Breakdown />
-            </TabPanel>
         </div>
     );
 }
 
-TabPanel.propTypes = propTypes;
+Details.propTypes = propTypes;
 export default Details;
