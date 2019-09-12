@@ -6,8 +6,8 @@ const styles = css({
         borderColor: 'transparent !important',
         color: '#51565c'
     },
-    ' a:active': {
-        background: 'red !important'
+    ' a:focus': {
+        borderBottom: '1px solid red',
     }
 });
 

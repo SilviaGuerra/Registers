@@ -15,7 +15,10 @@ const styles = css({
     },
     ' div': {
         padding: '10px 2px',
-    }
+    },
+    '@media screen and (min-width:1024px)': {
+        width: '20%'
+    },
 });
 
 export default styles;

@@ -1,5 +1,5 @@
 import React from 'react';
-// import Sidebar from './Sidebar';
+import Sidebar from './Sidebar';
 import Main from './Main';
 
 import styles from './styles';
@@ -7,7 +7,7 @@ import styles from './styles';
 const Container = () => {
     return (
         <div {...styles}>
-            {/* <Sidebar /> */}
+            <Sidebar />
             <Main />
         </div>
     );

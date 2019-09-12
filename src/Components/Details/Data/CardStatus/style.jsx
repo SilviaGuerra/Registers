@@ -72,8 +72,11 @@ const style = css({
                 textAlign: 'right',
                 fontSize: 12
             }
-        }
-    }
+        },
+    },
+    '@media screen and (min-width:1024px)': {
+        width: '48%'
+    },
 });
 
 export default style;

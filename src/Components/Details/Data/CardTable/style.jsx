@@ -2,6 +2,7 @@ import {css} from 'glamor';
 
 const style = css({
     width: '90%',
+    height: '100%',
     margin: '15px 10px 10px',
     padding: '20px 10px',
     background: '#fff',

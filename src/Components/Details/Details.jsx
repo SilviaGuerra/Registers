@@ -7,14 +7,12 @@ import Breakdown from './Breakdown';
 import styles from './styles';
 
 const propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
+    key: PropTypes.string,
+    setKey: PropTypes.function
 };
 
 const Details = () => {
     const [key, setKey] = useState('data');
-
     return (
         <div {...styles}>
             <h2>Detalles</h2>

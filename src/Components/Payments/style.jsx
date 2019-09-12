@@ -1,12 +1,7 @@
-import { css, fontFace } from 'glamor';
-import { transformFromAstAsync } from '@babel/core';
+import { css} from 'glamor';
 
-export const style = css({
+const style = css({
     
 });
 
-export const stylesMaterial = {
-    bodyTable: {
-        background: 'green'
-    }
-};
+export default style;
