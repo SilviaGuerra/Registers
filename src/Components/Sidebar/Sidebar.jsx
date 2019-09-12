@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import HamburgerMenu from 'react-hamburger-menu';
-//import SideMenu from './SideMenu';
+import SideMenu from './SideMenu';
 import style from './style';
 
 const Sidebar = () => {
     const [hamburguerMenu, toggleHamburguer] = useState(false);
     const setOpen = () => { toggleHamburguer(!hamburguerMenu) };
-    //const [menu, dropDownMenu] = useState(false);
-    //const dropOpen = () => { dropDownMenu(!menu) };
+    const [menu, dropDownMenu] = useState(false);
+    const dropOpen = () => { dropDownMenu(!menu) };
 
     return (
         <div {...style}>
@@ -22,7 +22,7 @@ const Sidebar = () => {
                 borderRadius={0}
                 animationDuration={0.5}
             />
-            {/* <SideMenu
+            <SideMenu
                 title={"General"}
                 openMenu={menu}
                 onCustomClick={dropOpen}
@@ -41,7 +41,7 @@ const Sidebar = () => {
                 title={"Developers"}
                 openMenu={menu}
                 onCustomClick={dropOpen}
-            /> */}
+            />
         </div>
     );
 }

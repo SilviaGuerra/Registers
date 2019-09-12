@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import styles from './styles';
 
 const SideList = () => {
@@ -7,13 +7,13 @@ const SideList = () => {
         <div {...styles}>
             <ul className="sideItem__list">
                 <li>
-                    <a href="#">Payments</a>
+                    <Link to="/Payments">Payments</Link>
                 </li>
                 <li>
-                    <a href="#">Transfers</a>
+                    <Link to="/Payments">Transfers</Link>
                 </li>
                 <li>
-                    <a href="#">Chargebacks</a>
+                    <Link to="/Payments">Chargebacks</Link>
                 </li>
             </ul>
         </div>
