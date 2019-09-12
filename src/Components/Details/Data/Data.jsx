@@ -5,6 +5,7 @@ import { Tab, Tabs } from 'react-bootstrap/';
 import { Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
 import CardStatus from './CardStatus';
 import CardClient from './CardClient';
+import CardMethod from './CardMethod';
 
 import styles from './styles';
 
@@ -32,7 +33,7 @@ const Data = () => {
     return (
         <section {...styles}>
             <CardStatus 
-                title="Payment status"
+                title="Estatus de pago"
                 amount={data.amount}
                 created={data.created}
                 paidAt={data.paid_at}
@@ -41,45 +42,16 @@ const Data = () => {
                 id={data.id}
             />
             <CardClient 
-                title="Client"
+                title="Cliente"
                 customerName={data.customer.name}
                 customerEmail={data.customer.email}
                 customerPhone={data.customer.phone}
             />
-            <div className="data__card">
-                <h3>Payment method</h3>
-                <div className="data__card__amount">
-                    {data.nested_charges.map(item => (
-                        <span>{item.payment_method.bank}</span>
-                    ))}
-                    {data.nested_charges.map(item => (
-                        <span>{item.payment_method.brand}</span>
-                    ))}
-                </div>
-                <div className="data__card__amount">
-                    {data.nested_charges.map(item => 
-                        <span>{item.payment_method.last4}</span>
-                    )}
-                    {data.nested_charges.map(item => (
-                        <span>{item.payment_method.name}</span>
-                    ))}
-                    <p>
-                        Fecha de expiración:
-                        {data.nested_charges.map(item => (
-                            <span>{item.payment_method.exp_month} /</span>
-                        ))}
-                        {data.nested_charges.map(item => (
-                            <span>{item.payment_method.exp_year}</span>
-                        ))}
-                    </p>
-                    <p>
-                        Código de autorización:
-                        {data.nested_charges.map(item => (
-                            <span>{item.payment_method.auth_code}</span>
-                        ))}
-                    </p>
-                </div> 
-            </div>
+            <CardMethod 
+                title="Método de pago"
+                nestedCharges={data.nested_charges}
+                type={data.type}
+            />
             <div className="data__card">
                 <Tabs defaultActiveKey="attemps" id="uncontrolled-tab-example">
                     <Tab eventKey="attemps" title="Intentos de pago">

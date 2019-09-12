@@ -5,6 +5,7 @@ import General from './General';
 import Phone from './Phone';
 import User from './User';
 import View from './View';
+import Visa from './Visa';
 
 export default {
     arrowDown: ArrowDown,
@@ -13,5 +14,6 @@ export default {
     general: General,
     phone: Phone,
     user: User,
-    view: View
+    view: View,
+    visa: Visa
 }

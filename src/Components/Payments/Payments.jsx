@@ -36,7 +36,7 @@ const Payments = () => {
                     <TableBody>
                         {data.results.map((item, key) => (
                             <TableRow key={key}>
-                                <TableCell><img src={icons.view()} alt="icon"/></TableCell>
+                                <TableCell>{icons.view()}</TableCell>
                                 <TableCell>{moment.unix(item.created).utc().format('DD MMM YY HH:mm A')}</TableCell>
                                 <TableCell>{item.status}</TableCell>
                                 <TableCell>{item.type}</TableCell>
