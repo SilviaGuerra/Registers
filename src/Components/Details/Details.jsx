@@ -4,6 +4,8 @@ import { Tabs, Tab } from 'react-bootstrap'
 import Data from './Data';
 import Breakdown from './Breakdown';
 
+import styles from './styles';
+
 const propTypes = {
     children: PropTypes.node,
     index: PropTypes.any.isRequired,
@@ -12,8 +14,9 @@ const propTypes = {
 
 const Details = () => {
     const [key, setKey] = useState('data');
+
     return (
-        <div>
+        <div {...styles}>
             <h2>Detalles</h2>
             <Tabs id="controlled-tab-example" activeKey={key} onSelect={k => setKey(k)}>
                 <Tab eventKey="data" title="Data">

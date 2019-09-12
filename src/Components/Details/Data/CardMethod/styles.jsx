@@ -6,6 +6,8 @@ const styles = css({
     background: '#fff',
     boxShadow: '-2px 3px 5px 4px rgba(0, 0, 0, 0.19)',
     position: 'relative',
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
     ' h5': {
         color: '#464343',
         textTransform: 'uppercase',
@@ -41,15 +43,14 @@ const styles = css({
             height: '200px',
             background: '#111b3a',
             color: '#fff',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            borderBottomRightRadius: 20,
+            borderBottomLeftRadius: 20,
             ' > div:nth-child(1)': {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                padding: '35px 0 0',
                 ' > p:nth-child(1)': {
                     display: 'flex',
                     alignItems: 'center'
@@ -60,8 +61,14 @@ const styles = css({
                 flexDirection: 'column',
                 alignItems: 'flex-start',
                 justifyContent: 'center',
+                padding: '45px 10px 0',
                 ' p': {
-                    textAlign: 'left'
+                    textAlign: 'left',
+                    margin: 0,
+                    fontSize: 14
+                },
+                ' span': {
+                    fontSize: 16
                 }
             }
         }

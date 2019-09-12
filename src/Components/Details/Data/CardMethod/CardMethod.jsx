@@ -32,16 +32,16 @@ const CardMethod = (props) => {
                         <p>
                             Fecha de expiración:
                                 {props.nestedCharges.map(item => (
-                                <span>{item.payment_method.exp_month} /</span>
+                                <span> {item.payment_method.exp_month} /</span>
                             ))}
                             {props.nestedCharges.map(item => (
-                                <span>{item.payment_method.exp_year}</span>
+                                <span> {item.payment_method.exp_year}</span>
                             ))}
                         </p>
                         <p>
                             Código de autorización:
                                 {props.nestedCharges.map(item => (
-                                <span>{item.payment_method.auth_code}</span>
+                                <span> {item.payment_method.auth_code}</span>
                             ))}
                         </p>
                     </div>
