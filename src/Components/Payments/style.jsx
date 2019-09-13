@@ -1,12 +1,11 @@
-import { css, fontFace } from 'glamor';
-import { transformFromAstAsync } from '@babel/core';
+import { css} from 'glamor';
 
-export const style = css({
-    
+const style = css({
+    padding: '40px 13px',
+
+    '@media screen and (min-width:1024px)': {
+        padding: '72px 40px'
+    },
 });
 
-export const stylesMaterial = {
-    bodyTable: {
-        background: 'green'
-    }
-};
+export default style;

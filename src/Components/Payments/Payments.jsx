@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import icons from '../../helpers/icons';
 import axios from 'axios';
 import moment from 'moment';
-import { Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
+import { Table } from 'react-bootstrap/';
 
-import { style, stylesMaterial } from './style';
+import style from './style';
 
 const Payments = () => {
     const [data, setData] = useState({ results: [] });
@@ -22,29 +22,29 @@ const Payments = () => {
         <div {...style}>
             <h2>Payments</h2>
             <Link to="/Details">
-                <Table size="small" padding="none">
-                    <TableHead classes={stylesMaterial.tableBody}>
-                        <TableRow>
-                            <TableCell></TableCell>
-                            <TableCell>Date</TableCell>
-                            <TableCell>Payment status</TableCell>
-                            <TableCell>Payment type</TableCell>
-                            <TableCell>Customer</TableCell>
-                            <TableCell>Amount</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
+                <Table striped bordered hover responsive>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Fecha</th>
+                            <th>Estatus de pago</th>
+                            <th>Tipo de pago</th>
+                            <th>Cliente</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {data.results.map((item, key) => (
-                            <TableRow key={key}>
-                                <TableCell>{icons.view()}</TableCell>
-                                <TableCell>{moment.unix(item.created).utc().format('DD MMM YY HH:mm A')}</TableCell>
-                                <TableCell>{item.status}</TableCell>
-                                <TableCell>{item.type}</TableCell>
-                                <TableCell>{item.customer.name}</TableCell>
-                                <TableCell>{item.amount}</TableCell>
-                            </TableRow>
+                            <tr key={key}>
+                                <td>{icons.view()}</td>
+                                <td>{moment.unix(item.created).utc().format('DD MMM YY HH:mm A')}</td>
+                                <td>{item.status}</td>
+                                <td>{item.type}</td>
+                                <td>{item.customer.name}</td>
+                                <td>{item.amount}</td>
+                            </tr>
                         ))}
-                    </TableBody>
+                    </tbody>
                 </Table>
             </Link>
         </div>

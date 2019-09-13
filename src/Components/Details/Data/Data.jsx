@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import { Tab, Tabs } from 'react-bootstrap/';
-import { Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
 import CardStatus from './CardStatus';
 import CardClient from './CardClient';
 import CardMethod from './CardMethod';
+import CardTable from './CardTable';
 
 import styles from './styles';
 
@@ -52,41 +51,12 @@ const Data = () => {
                 nestedCharges={data.nested_charges}
                 type={data.type}
             />
-            <div className="data__card">
-                <Tabs defaultActiveKey="attemps" id="uncontrolled-tab-example">
-                    <Tab eventKey="attemps" title="Intentos de pago">
-                        <Table size="small">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Date</TableCell>
-                                    <TableCell>Status</TableCell>
-                                    <TableCell>Payment method</TableCell>
-                                    <TableCell>Amount</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                <TableRow>
-                                    <TableCell>{data.created}</TableCell>
-                                    <TableCell>{data.status}</TableCell>
-                                    {data.nested_charges.map(item => 
-                                        <TableCell>
-                                            {item.payment_method.type}
-                                        </TableCell>
-                                    )}
-                                    <TableCell></TableCell>
-                                    <TableCell>{data.amount}</TableCell>
-                                </TableRow>
-                            </TableBody>
-                        </Table>
-                    </Tab>
-                    <Tab eventKey="refunds" title="Reembolsos" disabled>
-                        profile
-                    </Tab>
-                    <Tab eventKey="notifications" title="Notificaciones" disabled>
-                        inactivo
-                        </Tab>
-                </Tabs>
-            </div> 
+            <CardTable 
+                created={data.created}
+                status={data.status}
+                nestedCharges={data.nested_charges}
+                amount={data.amount}
+            />
         </section>
     );
 }
