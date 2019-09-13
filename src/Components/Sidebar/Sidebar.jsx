@@ -4,15 +4,16 @@ import SideMenu from './SideMenu';
 import style from './style';
 
 const Sidebar = () => {
-    const [hamburguerMenu, toggleHamburguer] = useState(false);
-    const setOpen = () => { toggleHamburguer(!hamburguerMenu) };
-    const [menu, dropDownMenu] = useState(false);
-    const dropOpen = () => { dropDownMenu(!menu) };
+    const [hamburgerMenu, toggleHamburger] = useState(false);
+    const setOpen = () => { toggleHamburger(!hamburgerMenu) };
+    
+    // const [menu, dropDownMenu] = useState(false);
+    // const dropOpen = () => { dropDownMenu(!menu) };
 
     return (
         <div {...style}>
             <HamburgerMenu
-                isOpen={hamburguerMenu}
+                isOpen={hamburgerMenu}
                 menuClicked={setOpen}
                 width={18}
                 height={15}
@@ -23,24 +24,8 @@ const Sidebar = () => {
                 animationDuration={0.5}
             />
             <SideMenu
-                title={"General"}
-                openMenu={menu}
-                onCustomClick={dropOpen}
-            />
-            <SideMenu
-                title={"Transactions"}
-                openMenu={menu}
-                onCustomClick={dropOpen}
-            />
-            <SideMenu
-                title={"Accounting"}
-                openMenu={menu}
-                onCustomClick={dropOpen}
-            />
-            <SideMenu
-                title={"Developers"}
-                openMenu={menu}
-                onCustomClick={dropOpen}
+                openMenu={hamburgerMenu}
+                // onCustomClick={dropOpen}
             />
         </div>
     );

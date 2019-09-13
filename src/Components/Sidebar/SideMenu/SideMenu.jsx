@@ -1,20 +1,33 @@
 import React from 'react';
 import SideItem from './SideItem';
-import SideList from './SideList';
+
 
 import styles from './styles';
 
 const SideMenu = (props) => {
+    const open = props.openMenu ? 'translateX(0)' : 'translateX(-100%)';
     return (
-        <div {...styles}>
+        <div {...styles(open)} isOpen={props.openMenu}>
             <SideItem 
-                title={props.title}
-                open={props.openMenu}
-                onClick={() => props.onCustomClick()}
+                title="General"
+                // open={props.openMenu}
+                // onClick={() => props.onCustomClick()}
             />
-            <SideList /> 
-            {/* {console.log(props.open, props.onCustomClick)} */}
-            {/* {props.openMenu ? <SideList /> : null} */}
+            <SideItem
+                title="Transactions"
+                // open={props.openMenu}
+                // onClick={() => props.onCustomClick()}
+            />
+            <SideItem
+                title="Accounting"
+                // open={props.openMenu}
+                // onClick={() => props.onCustomClick()}
+            />
+            <SideItem
+                title="Developers"
+                // open={props.openMenu}
+                // onClick={() => props.onCustomClick()}
+            />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import { css } from 'glamor';
 
-const styles = css({
-    display: 'flex',
+const styles = (display) => css({
+    display: display,
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0px 10px',

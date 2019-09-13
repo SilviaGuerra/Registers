@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import icons from '../../helpers/icons';
 import axios from 'axios';
 import moment from 'moment';
-import { Tab, Tabs, Table } from 'react-bootstrap/';
+import { Table } from 'react-bootstrap/';
 
 import style from './style';
 
@@ -22,7 +22,7 @@ const Payments = () => {
         <div {...style}>
             <h2>Payments</h2>
             <Link to="/Details">
-                <Table striped bordered hover size="sm">
+                <Table striped bordered hover responsive>
                     <thead>
                         <tr>
                             <th></th>

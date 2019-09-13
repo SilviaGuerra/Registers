@@ -1,6 +1,7 @@
 import {css} from 'glamor';
 
 const styles = css({
+    padding: '80px 0px',
     ' .nav > a': {
         background: 'transparent !important',
         borderColor: 'transparent !important',
