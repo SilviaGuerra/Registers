@@ -1,7 +1,7 @@
 import { css } from 'glamor';
 
-const style = css({
-    width: '0%', //va a cambiar a 20%
+const style = widthSideBar => css({
+    width: widthSideBar,
     height: '100vh',
     zIndex: 99,
     ' > div:nth-child(1)': {

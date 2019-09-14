@@ -6,11 +6,11 @@ import style from './style';
 const Sidebar = () => {
     const [hamburgerMenu, toggleHamburger] = useState(false);
     const setOpen = () => { toggleHamburger(!hamburgerMenu) };
-    
+    const widthSideBar = hamburgerMenu ? '20%' : '0%';
     // const [menu, dropDownMenu] = useState(false);
     // const dropOpen = () => { dropDownMenu(!menu) };
     return (
-        <div {...style}>
+        <div {...style(widthSideBar)}>
             <HamburgerMenu
                 isOpen={hamburgerMenu}
                 menuClicked={setOpen}
