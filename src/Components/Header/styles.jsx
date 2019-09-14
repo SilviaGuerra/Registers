@@ -33,8 +33,11 @@ const styles = css({
         background: 'transparent',
         borderColor: 'transparent',
         color: '#000'
-    }
-    
+    },
+    '@media screen and (min-width:1024px)': {
+        width: '100%',
+        zIndex: 2
+    },
 });
 
 export default styles;
