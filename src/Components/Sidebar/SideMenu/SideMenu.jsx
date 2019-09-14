@@ -5,8 +5,8 @@ import SideItem from './SideItem';
 import styles from './styles';
 
 const SideMenu = (props) => {
-    const open = props.openMenu ? 'translateX(0)' : 'translateX(-100%)';
-    // isOpen = { props.openMenu }
+    const open = props.openMenu ? 'inline' : 'none';
+    
     return (
         <div {...styles(open)}>
             <SideItem 
