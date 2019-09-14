@@ -9,7 +9,6 @@ const Sidebar = () => {
     
     // const [menu, dropDownMenu] = useState(false);
     // const dropOpen = () => { dropDownMenu(!menu) };
-
     return (
         <div {...style}>
             <HamburgerMenu
@@ -23,12 +22,9 @@ const Sidebar = () => {
                 borderRadius={0}
                 animationDuration={0.5}
             />
-            <SideMenu
-                openMenu={hamburgerMenu}
-                // onCustomClick={dropOpen}
-            />
+            <SideMenu />
         </div>
-    );
+    )
 }
 
 export default Sidebar;

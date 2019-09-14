@@ -6,8 +6,9 @@ import styles from './styles';
 
 const SideMenu = (props) => {
     const open = props.openMenu ? 'translateX(0)' : 'translateX(-100%)';
+    // isOpen = { props.openMenu }
     return (
-        <div {...styles(open)} isOpen={props.openMenu}>
+        <div {...styles(open)}>
             <SideItem 
                 title="General"
                 // open={props.openMenu}

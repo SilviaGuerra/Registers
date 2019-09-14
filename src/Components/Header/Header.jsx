@@ -1,5 +1,5 @@
 import React from 'react';
-import {DropdownButton, ButtonToolbar, Dropdown} from 'react-bootstrap'
+import {DropdownButton, Dropdown} from 'react-bootstrap'
 import styles from './styles';
 
 const Header = () => {
