@@ -2,6 +2,7 @@ import ArrowDown from './ArrowDown';
 import ArrowUp from './ArrowUp';
 import Email from './Email';
 import General from './General';
+import LogoComplete from './LogoComplete';
 import Phone from './Phone';
 import User from './User';
 import View from './View';
@@ -12,6 +13,7 @@ export default {
     arrowUp: ArrowUp,
     email: Email,
     general: General,
+    logoComplete: LogoComplete,
     phone: Phone,
     user: User,
     view: View,
