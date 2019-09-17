@@ -1,14 +1,14 @@
 import { css } from 'glamor';
 
-const styles = (display) => css({
-    display: display,
+const styles = css({
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0px 10px',
     ' .sideItem': {
         '&__list': {
             paddingLeft: '10px',
-            transform: 'translate(27%, 0%)',
+            transform: 'translate(17%, 0%)',
             listStyleType: 'none',
             ' > li': {
                 padding: '5px 0px',

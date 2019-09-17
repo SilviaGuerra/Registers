@@ -10,7 +10,7 @@ const CardTable = (props) => {
         <div {...style}>
             <Tabs defaultActiveKey="attemps" id="uncontrolled-tab-example" size="sm" responsive="sm">
                 <Tab eventKey="attemps" title="Intentos de pago">
-                    <Table striped bordered hover>
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Fecha</th>
@@ -41,10 +41,10 @@ const CardTable = (props) => {
                     </Table>
                 </Tab>
                 <Tab eventKey="refunds" title="Reembolsos" disabled>
-                    profile
+                    Reembolsos
                 </Tab>
                 <Tab eventKey="notifications" title="Notificaciones" disabled>
-                    inactivo
+                    Notificaciones
                 </Tab>
             </Tabs>
         </div>

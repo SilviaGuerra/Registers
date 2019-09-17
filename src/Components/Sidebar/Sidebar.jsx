@@ -8,10 +8,10 @@ import style from './style';
 const Sidebar = () => {
     const [hamburgerMenu, toggleHamburger] = useState(false);
     const setOpen = () => { toggleHamburger(!hamburgerMenu) };
-    const widthSideBar = hamburgerMenu ? '80%' : '0%';
+    
+    const widthSideBar = hamburgerMenu ? '40%' : '0%';
     const logo = hamburgerMenu ? 'inline' : 'none';
-    // const [menu, dropDownMenu] = useState(false);
-    // const dropOpen = () => { dropDownMenu(!menu) };
+
     return (
         <div {...style(widthSideBar, logo)}>
             <HamburgerMenu

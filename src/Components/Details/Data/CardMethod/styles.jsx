@@ -2,7 +2,7 @@ import {css} from 'glamor';
 
 const styles = css({
     width: '90%',
-    margin: '15px 10px 10px',
+    margin: '15px 20px 10px',
     background: '#fff',
     boxShadow: '-2px 3px 5px 4px rgba(0, 0, 0, 0.19)',
     position: 'relative',
@@ -61,7 +61,7 @@ const styles = css({
                 flexDirection: 'column',
                 alignItems: 'flex-start',
                 justifyContent: 'center',
-                padding: '45px 10px 0',
+                padding: '22px 10px 0',
                 ' p': {
                     textAlign: 'left',
                     margin: 0,

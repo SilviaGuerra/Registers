@@ -9,7 +9,8 @@ const style = css({
     },
     ' > div > p': {
         margin: 0,
-        fontSize: 14
+        fontSize: 14,
+        wordBreak: 'break-word'
     },
     ' p:nth-child(1)': {
         color: '#8a8c95'

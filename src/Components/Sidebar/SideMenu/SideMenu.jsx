@@ -11,18 +11,12 @@ const SideMenu = (props) => {
         <div {...styles(open)}>
             <SideItem 
                 title="General"
-                // open={props.openMenu}
-                // onClick={() => props.onCustomClick()}
             />
             <SideItem
                 title="Transactions"
-                // open={props.openMenu}
-                // onClick={() => props.onCustomClick()}
             />
             <SideItem
                 title="Accounting"
-                // open={props.openMenu}
-                // onClick={() => props.onCustomClick()}
             />
             <SideItem
                 title="Developers"

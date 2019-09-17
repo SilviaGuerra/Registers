@@ -11,8 +11,7 @@ const style = (widthSideBar, logo) => css({
     ' > svg': {
         display: logo,
         margin: '15px',
-        width: 200,
-        height: 80
+        width: '50%',
     },
     '@media screen and (min-width:1024px)': {
         width: '30%',
