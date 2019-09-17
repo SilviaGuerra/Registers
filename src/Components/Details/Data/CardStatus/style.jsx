@@ -2,7 +2,7 @@ import {css} from 'glamor';
 
 const style = css({
     width: '90%',
-    margin: '15px 10px 10px',
+    margin: '15px 20px 10px',
     padding: '20px 10px',
     background: '#fff',
     boxShadow: '-2px 3px 5px 4px rgba(0, 0, 0, 0.19)',
@@ -75,7 +75,7 @@ const style = css({
         },
     },
     '@media screen and (min-width:1024px)': {
-        width: '48%'
+        width: '38%'
     },
 });
 

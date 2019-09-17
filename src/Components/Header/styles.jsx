@@ -6,7 +6,7 @@ const styles = css({
     display: 'flex',
     justifyContent: 'flex-end',
     zIndex: 1,
-    ' > div': {
+    ' > nav': {
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
@@ -36,7 +36,7 @@ const styles = css({
     },
     '@media screen and (min-width:1024px)': {
         width: '100%',
-        zIndex: 2
+        zIndex: 2,
     },
 });
 

@@ -18,6 +18,11 @@ const Payments = () => {
         setData({ results: result.data.data.payments });
     }, []);
 
+    // console.log(data.results)
+    // const declinedcolor = item.status
+    // const declinedbkg = item.status === "declined" ? '#e29494' : null;
+    
+
     return (
         <div {...style}>
             <h2>Payments</h2>
@@ -38,10 +43,23 @@ const Payments = () => {
                             <tr key={key}>
                                 <td>{icons.view()}</td>
                                 <td>{moment.unix(item.created).utc().format('DD MMM YY HH:mm A')}</td>
-                                <td>{item.status}</td>
-                                <td>{item.type}</td>
-                                <td>{item.customer.name}</td>
-                                <td>{item.amount}</td>
+                                <td>
+                                    <span>
+                                        {item.status}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>{item.type}</span>
+                                    <span>
+                                        {item.brand === "visa" ? icons.visa() : null}
+                                        {item.brand === "american_express" ? icons.american() : null}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>{item.customer.name}</span>
+                                    <span>{item.customer.email}</span>
+                                </td>
+                                <td>$ {item.amount}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -1,19 +1,30 @@
 import { css } from 'glamor';
 
-const style = widthSideBar => css({
+const style = (widthSideBar, logo) => css({
     width: widthSideBar,
     height: '100vh',
     zIndex: 99,
+    background: '#fff',
     ' > div:nth-child(1)': {
-        margin: '15px'
+        margin: '15px',
+        display: 'inline-flex'
+    },
+    ' > svg': {
+        display: logo,
+        margin: '15px',
+        width: '50%',
     },
     '@media screen and (min-width:1024px)': {
         width: '30%',
-        // zIndex: 3,
         ' > div:nth-child(1)': {
             background: '#fff',
             display: 'none'
         },
+        ' > svg': {
+            display: 'inline',
+            width: 130,
+            height: 60
+        }
     },
 });
 

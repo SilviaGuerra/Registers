@@ -10,7 +10,7 @@ const CardTable = (props) => {
         <div {...style}>
             <Tabs defaultActiveKey="attemps" id="uncontrolled-tab-example" size="sm" responsive="sm">
                 <Tab eventKey="attemps" title="Intentos de pago">
-                    <Table striped bordered hover>
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Fecha</th>
@@ -26,8 +26,8 @@ const CardTable = (props) => {
                                     <span className="table__status">{props.status}</span>
                                 </td>
                                 <td>
-                                    {props.nestedCharges.map(item =>
-                                        <p>
+                                    {props.nestedCharges.map((item, key) =>
+                                        <p key={key}>
                                             <span>
                                                 {item.payment_method.brand === "visa" ? icons.visa() : null}
                                             </span>
@@ -41,10 +41,10 @@ const CardTable = (props) => {
                     </Table>
                 </Tab>
                 <Tab eventKey="refunds" title="Reembolsos" disabled>
-                    profile
+                    Reembolsos
                 </Tab>
                 <Tab eventKey="notifications" title="Notificaciones" disabled>
-                    inactivo
+                    Notificaciones
                 </Tab>
             </Tabs>
         </div>

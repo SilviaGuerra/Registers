@@ -6,7 +6,7 @@ const style = css({
     background: '#F4F7FE',
     boxSizing: 'border-box',
     overflow: 'hidden',
-    padding: '0 10px',
+    padding: '70px 10px',
     '@media screen and (min-width:1024px)': {
         width: '100%',
         // zIndex: 1

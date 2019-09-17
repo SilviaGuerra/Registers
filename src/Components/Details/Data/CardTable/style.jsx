@@ -3,13 +3,14 @@ import {css} from 'glamor';
 const style = css({
     width: '90%',
     height: '100%',
-    margin: '15px 10px 10px',
+    margin: '15px 20px 10px',
     padding: '20px 10px',
     background: '#fff',
     boxShadow: '-2px 3px 5px 4px rgba(0, 0, 0, 0.19)',
     ' nav > a': {
-        width: '30%',
-        fontSize: '10px'
+        width: '33%',
+        fontSize: '10px',
+        wordWrap: 'break-word',
     },
     ' .table thead th, td': {
         fontSize: 10,
@@ -18,6 +19,9 @@ const style = css({
     ' svg': {
         width: 25,
         height: 25
+    },
+    ' .nav-link': {
+        padding: '.5rem 10px',
     },
     ' .table__status': {
         background: '#e29494',
