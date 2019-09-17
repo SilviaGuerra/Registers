@@ -20,7 +20,7 @@ const SideItem = (props) => {
         <div {...styles(display)} onClick={setOpen} >
             <div className="sideItem__title" >
                 <GeneralIcon />
-                <h6>{props.title}</h6>
+                <h6>{props.titleItem}</h6>
                 {arrow ? <ArrowDown /> : <ArrowUp />}
             </div>
             <SideList />
