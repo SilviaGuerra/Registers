@@ -24,8 +24,14 @@ const styles = display => css({
     },
     ' > div:nth-child(2)': {
         display: display,
-        // visibility: 'hidden'
-    }
+    },
+    '@media screen and (min-width:1024px)': {
+        ' .sideItem__title': {
+            ' > h6': {
+                fontSize: '16px'
+            }
+        }
+    },
 });
 
 export default styles;

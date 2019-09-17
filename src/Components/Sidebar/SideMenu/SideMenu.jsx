@@ -20,8 +20,6 @@ const SideMenu = (props) => {
             />
             <SideItem
                 title="Developers"
-                // open={props.openMenu}
-                // onClick={() => props.onCustomClick()}
             />
         </div>
     );
