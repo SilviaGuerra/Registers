@@ -4,6 +4,7 @@ const style = (widthSideBar, logo) => css({
     width: widthSideBar,
     height: '100vh',
     zIndex: 99,
+    background: '#fff',
     ' > div:nth-child(1)': {
         margin: '15px',
         display: 'inline-flex'

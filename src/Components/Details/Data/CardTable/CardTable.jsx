@@ -26,8 +26,8 @@ const CardTable = (props) => {
                                     <span className="table__status">{props.status}</span>
                                 </td>
                                 <td>
-                                    {props.nestedCharges.map(item =>
-                                        <p>
+                                    {props.nestedCharges.map((item, key) =>
+                                        <p key={key}>
                                             <span>
                                                 {item.payment_method.brand === "visa" ? icons.visa() : null}
                                             </span>
