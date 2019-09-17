@@ -1,3 +1,4 @@
+import American from './American';
 import ArrowDown from './ArrowDown';
 import ArrowUp from './ArrowUp';
 import Email from './Email';
@@ -9,6 +10,7 @@ import View from './View';
 import Visa from './Visa';
 
 export default {
+    american: American,
     arrowDown: ArrowDown,
     arrowUp: ArrowUp,
     email: Email,

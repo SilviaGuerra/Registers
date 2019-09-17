@@ -48,9 +48,18 @@ const Payments = () => {
                                         {item.status}
                                     </span>
                                 </td>
-                                <td>{item.type}</td>
-                                <td>{item.customer.name}</td>
-                                <td>{item.amount}</td>
+                                <td>
+                                    <span>{item.type}</span>
+                                    <span>
+                                        {item.brand === "visa" ? icons.visa() : null}
+                                        {item.brand === "american_express" ? icons.american() : null}
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>{item.customer.name}</span>
+                                    <span>{item.customer.email}</span>
+                                </td>
+                                <td>$ {item.amount}</td>
                             </tr>
                         ))}
                     </tbody>

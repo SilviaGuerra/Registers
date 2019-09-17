@@ -37,7 +37,6 @@ const styles = css({
     '@media screen and (min-width:1024px)': {
         width: '100%',
         zIndex: 2,
-        background: 'pink'
     },
 });
 

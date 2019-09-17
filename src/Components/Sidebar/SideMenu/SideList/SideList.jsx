@@ -7,13 +7,13 @@ const SideList = () => {
         <div {...styles}>
             <ul className="sideItem__list">
                 <li>
-                    <Link to="/Payments">Payments</Link>
+                    <Link to="/">Payments</Link>
                 </li>
                 <li>
-                    <Link to="/Payments">Transfers</Link>
+                    <Link to="/">Transfers</Link>
                 </li>
                 <li>
-                    <Link to="/Payments">Chargebacks</Link>
+                    <Link to="/">Chargebacks</Link>
                 </li>
             </ul>
         </div>
