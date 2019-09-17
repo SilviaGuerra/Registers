@@ -19,7 +19,12 @@ const styles = css({
                 }
             }
         }
-    }
+    },
+    '@media screen and (min-width:1024px)': {
+        ' .sideItem__list': {
+            transform: 'translate(12%, 0%)',
+        }
+    },
 });
 
 export default styles;

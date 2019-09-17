@@ -6,23 +6,15 @@ import styles from './styles';
 
 const SideMenu = (props) => {
     const open = props.openMenu ? 'inline' : 'none';
-    
+    const title = ["General", "Transactions", "Accounting", "Developers"];
+
     return (
         <div {...styles(open)}>
-            <SideItem 
-                title="General"
-            />
-            <SideItem
-                title="Transactions"
-            />
-            <SideItem
-                title="Accounting"
-            />
-            <SideItem
-                title="Developers"
-                // open={props.openMenu}
-                // onClick={() => props.onCustomClick()}
-            />
+            {title.map(item => (
+                <SideItem 
+                    titleItem={item}
+                />
+            ))}
         </div>
     );
 }
